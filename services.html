@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services | Anu PetCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .services-banner {
+            background: linear-gradient(
+                rgba(0,136,204,.90),
+                rgba(0,136,204,.90)
+            );
+
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .services-banner h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .service-section {
+            padding: 60px 8%;
+            background: #f5f9ff;
+        }
+
+        .service-section h2 {
+            text-align: center;
+            color: #0088cc;
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0,0,0,.12);
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .service-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .service-info h3 {
+            color: #0088cc;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .service-info p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @media(max-width:768px) {
+
+            .services-banner h1 {
+                font-size: 36px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        🐾 Anu PetCare
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="appointments.html">Appointments</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+
+<section class="services-banner">
+
+    <h1>Our Services</h1>
+
+    <p>Complete Care for Your Beloved Pets 🐾</p>
+
+</section>
+
+
+<section class="service-section">
+
+    <h2>What We Provide</h2>
+
+
+    <div class="service-grid">
+
+
+        <div class="service-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=800&q=80"
+            alt="Veterinary Care">
+
+            <div class="service-info">
+
+                <h3>Veterinary Care</h3>
+
+                <p>
+                    Professional health checkups,
+                    diagnosis and treatment for pets.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?auto=format&fit=crop&w=800&q=80"
+            alt="Pet Grooming">
+
+            <div class="service-info">
+
+                <h3>Pet Grooming</h3>
+
+                <p>
+                    Grooming services to keep your
+                    pets clean, comfortable and healthy.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=800&q=80"
+            alt="Pet Vaccination">
+
+            <div class="service-info">
+
+                <h3>Vaccination</h3>
+
+                <p>
+                    Essential vaccinations and
+                    preventive healthcare for pets.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=800&q=80"
+            alt="Pet Boarding">
+
+            <div class="service-info">
+
+                <h3>Pet Boarding</h3>
+
+                <p>
+                    Safe and comfortable boarding
+                    facilities for your pets.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=800&q=80"
+            alt="Pet Nutrition">
+
+            <div class="service-info">
+
+                <h3>Pet Nutrition</h3>
+
+                <p>
+                    Guidance for healthy food,
+                    nutrition and proper pet care.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=800&q=80"
+            alt="Emergency Pet Care">
+
+            <div class="service-info">
+
+                <h3>Emergency Care</h3>
+
+                <p>
+                    Quick and compassionate care
+                    during pet emergencies.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>© 2026 Anu PetCare & Veterinary Clinic</p>
+
+    <p>Caring Hearts, Healthy Pets 🐾</p>
+
+</footer>
+
+
+</body>
+
+</html>

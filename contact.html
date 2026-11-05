@@ -1,0 +1,554 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Contact | Anu PetCare</title> 
+ 
+<style> 
+*{ 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+    font-family:Arial,Helvetica,sans-serif; 
+} 
+ 
+body{ 
+    background:#f5f9ff; 
+    color:#333; 
+} 
+ 
+header{ 
+    background:#0088cc; 
+    color:white; 
+    padding:18px 8%; 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center; 
+} 
+ 
+.logo{ 
+    font-size:28px; 
+    font-weight:bold; 
+} 
+ 
+nav a{ 
+    color:white; 
+    text-decoration:none; 
+    margin-left:22px; 
+    font-size:18px; 
+} 
+ 
+nav a:hover{ 
+    color:#ffe600; 
+} 
+ 
+.banner{ 
+    background:#0088cc; 
+    color:white; 
+    text-align:center; 
+    padding:65px 20px; 
+} 
+ 
+.banner h1{ 
+    font-size:45px; 
+    margin-bottom:10px; 
+} 
+ 
+.contact{ 
+    padding:60px 8%; 
+} 
+ 
+.contact-container{ 
+    display:grid; 
+    grid-template-columns:1fr 1fr; 
+    gap:35px; 
+    max-width:1100px; 
+    margin:auto; 
+} 
+ 
+.contact-info, 
+.contact-form{ 
+    background:white; 
+    padding:35px; 
+    border-radius:15px; 
+    box-shadow:0 5px 15px rgba(0,0,0,.1); 
+} 
+ 
+.contact-info h2, 
+.contact-form h2{ 
+    color:#0088cc; 
+    margin-bottom:25px; 
+} 
+ 
+.info{ 
+    margin-bottom:22px; 
+} 
+ 
+.info h3{ 
+    color:#0088cc; 
+    margin-bottom:5px; 
+} 
+ 
+.info p{ 
+    color:#555; 
+    line-height:1.6; 
+} 
+ 
+.contact-form label{ 
+    display:block; 
+    margin-bottom:6px; 
+    font-weight:bold; 
+} 
+ 
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea{ 
+    width:100%; 
+    padding:12px; 
+    margin-bottom:17px; 
+    border:1px solid #ccc; 
+    border-radius:8px; 
+} 
+ 
+.contact-form textarea{ 
+    height:120px; 
+    resize:none; 
+} 
+ 
+button{ 
+    background:#ff9800; 
+    color:white; 
+    border:none; 
+    padding:13px 30px; 
+    border-radius:30px; 
+    cursor:pointer; 
+    font-size:16px; 
+} 
+ 
+button:hover{ 
+    background:#e67e00; 
+} 
+
+
+/* ================= MAP ================= */
+
+.map-section{
+    padding:0 8% 60px;
+    text-align:center;
+}
+
+.map-section h2{
+    color:#0088cc;
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.map-section p{
+    color:#555;
+    margin-bottom:25px;
+}
+
+.map{
+    width:100%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.map iframe{
+    width:100%;
+    height:350px;
+    border:0;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+ 
+ 
+footer{ 
+    background:#0088cc; 
+    color:white; 
+    text-align:center; 
+    padding:20px; 
+    margin-top:40px; 
+} 
+ 
+@media(max-width:850px){ 
+ 
+    header{ 
+        flex-direction:column; 
+    } 
+ 
+    nav{ 
+        margin-top:15px; 
+        text-align:center; 
+    } 
+ 
+    nav a{ 
+        display:inline-block; 
+        margin:7px; 
+        font-size:16px; 
+    } 
+ 
+    .contact-container{ 
+        grid-template-columns:1fr; 
+    } 
+} 
+</style> 
+</head> 
+ 
+<body> 
+ 
+<header> 
+ 
+    <div class="logo">🐾 Anu PetCare</div> 
+ 
+    <nav> 
+        <a href="index.html">Home</a> 
+        <a href="about.html">About</a> 
+        <a href="services.html">Services</a> 
+        <a href="gallery.html">Gallery</a> 
+        <a href="appointments.html">Appointments</a> 
+        <a href="contact.html">Contact</a> 
+    </nav> 
+ 
+</header> 
+ 
+ 
+<section class="banner"> 
+ 
+    <h1>Contact Us</h1> 
+ 
+    <p> 
+        We are here to care for your beloved pets 
+    </p> 
+ 
+</section> 
+ 
+ 
+<section class="contact"> 
+ 
+    <div class="contact-container"> 
+ 
+ 
+        <!-- CONTACT INFORMATION --> 
+ 
+        <div class="contact-info"> 
+ 
+            <h2>Get In Touch</h2> 
+ 
+ 
+            <div class="info"> 
+ 
+                <h3>📍 Address</h3> 
+ 
+                <p> 
+                    Anu PetCare & Veterinary Clinic 
+                </p> 
+ 
+                <p> 
+                    Kurnool, Andhra Pradesh, India 
+                </p> 
+ 
+            </div> 
+ 
+ 
+            <div class="info"> 
+ 
+                <h3>📞 Phone</h3> 
+ 
+                <!-- SAME NUMBER AS HOME PAGE --> 
+ 
+                <p> 
+                    +91 12345 67890 
+                </p> 
+ 
+            </div> 
+ 
+ 
+            <div class="info"> 
+ 
+                <h3>📧 Email</h3> 
+ 
+                <p> 
+                    anupetcare@gmail.com 
+                </p> 
+ 
+            </div> 
+ 
+ 
+            <div class="info"> 
+ 
+                <h3>🕒 Working Hours</h3> 
+ 
+                <p> 
+                    Monday - Saturday: 9:00 AM - 8:00 PM 
+                </p> 
+ 
+                <p> 
+                    Sunday: 10:00 AM - 2:00 PM 
+                </p> 
+ 
+            </div> 
+ 
+        </div> 
+ 
+ 
+        <!-- CONTACT FORM --> 
+ 
+        <div class="contact-form"> 
+ 
+            <h2>Send Us a Message</h2> 
+ 
+            <form id="appointmentForm"> 
+ 
+                <label>Your Name</label> 
+ 
+                <input 
+                    type="text" 
+                    id="name"
+                    placeholder="Enter your name" 
+                    required
+                > 
+ 
+ 
+                <label>Phone Number</label> 
+ 
+                <input 
+                    type="tel" 
+                    id="phone"
+                    placeholder="Enter your phone number" 
+                    maxlength="10"
+                    required
+                > 
+ 
+ 
+                <label>Email</label> 
+ 
+                <input 
+                    type="email" 
+                    id="email"
+                    placeholder="Enter your email" 
+                    required
+                > 
+ 
+ 
+                <label>Select Service</label> 
+ 
+                <select id="service" required> 
+ 
+                    <option value=""> 
+                        Choose a service 
+                    </option> 
+ 
+                    <option> 
+                        Health Checkup 
+                    </option> 
+ 
+                    <option> 
+                        Vaccination 
+                    </option> 
+ 
+                    <option> 
+                        Veterinary Treatment 
+                    </option> 
+ 
+                    <option> 
+                        Pet Grooming 
+                    </option> 
+ 
+                    <option> 
+                        Pet Nutrition 
+                    </option> 
+ 
+                </select> 
+ 
+ 
+                <label>Message</label> 
+ 
+                <textarea 
+                    id="message"
+                    placeholder="Tell us about your pet..." 
+                    required
+                ></textarea> 
+ 
+ 
+                <button type="submit"> 
+                    Send Message 
+                </button> 
+ 
+            </form> 
+ 
+        </div> 
+ 
+    </div> 
+ 
+</section> 
+
+
+<!-- ================= MAP ================= -->
+
+<section class="map-section">
+
+    <h2>Find Us</h2>
+
+    <p>
+        Anu PetCare & Veterinary Clinic, Kurnool
+    </p>
+
+    <div class="map">
+
+        <iframe
+            src="https://www.google.com/maps?q=Kurnool,Andhra+Pradesh,India&output=embed"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+
+    </div>
+
+</section>
+ 
+ 
+<footer> 
+ 
+    <p> 
+        © 2026 Anu PetCare & Veterinary Clinic 
+    </p> 
+ 
+    <p> 
+        Caring Hearts, Healthy Pets 🐾 
+    </p> 
+ 
+</footer> 
+
+
+<!-- ================= FORM VALIDATION ================= -->
+
+<script>
+
+/* ================= NAME: LETTERS ONLY ================= */
+
+document.getElementById("name").addEventListener("input", function(){
+
+    this.value = this.value.replace(/[^A-Za-z ]/g, "");
+
+});
+
+
+/* ================= PHONE: NUMBERS ONLY ================= */
+
+document.getElementById("phone").addEventListener("input", function(){
+
+    this.value = this.value.replace(/[^0-9]/g, "");
+
+});
+
+
+/* ================= FORM SUBMIT ================= */
+
+document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let service = document.getElementById("service").value;
+    let message = document.getElementById("message").value.trim();
+
+
+    /* ================= NAME VALIDATION ================= */
+
+    let namePattern = /^[A-Za-z ]+$/;
+
+    if (!namePattern.test(name)) {
+
+        alert("❌ Invalid Name!\n\nName should contain letters only.");
+
+        document.getElementById("name").focus();
+
+        return;
+    }
+
+
+    if (name.length < 3) {
+
+        alert("❌ Please enter a valid name.");
+
+        document.getElementById("name").focus();
+
+        return;
+    }
+
+
+    /* ================= PHONE VALIDATION ================= */
+
+    let phonePattern = /^[6-9][0-9]{9}$/;
+
+    if (!phonePattern.test(phone)) {
+
+        alert("❌ Invalid Phone Number!\n\nPlease enter a valid 10-digit mobile number.");
+
+        document.getElementById("phone").focus();
+
+        return;
+    }
+
+
+    /* ================= EMAIL VALIDATION ================= */
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+
+        alert("❌ Please enter a valid email address.");
+
+        document.getElementById("email").focus();
+
+        return;
+    }
+
+
+    /* ================= SERVICE VALIDATION ================= */
+
+    if (service === "") {
+
+        alert("❌ Please select a service.");
+
+        document.getElementById("service").focus();
+
+        return;
+    }
+
+
+    /* ================= MESSAGE VALIDATION ================= */
+
+    if (message.length < 5) {
+
+        alert("❌ Please enter a message about your pet.");
+
+        document.getElementById("message").focus();
+
+        return;
+    }
+
+
+    /* ================= SUCCESS MESSAGE ================= */
+
+    alert(
+        "✅ Appointment Booked Successfully!\n\n" +
+        "Thank you, " + name + "!\n" +
+        "Service: " + service + "\n\n" +
+        "Our Anu PetCare team will contact you soon."
+    );
+
+
+    /* ================= CLEAR FORM ================= */
+
+    document.getElementById("appointmentForm").reset();
+
+});
+
+</script>
+ 
+</body> 
+</html>

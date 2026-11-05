@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Anu PetCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           GALLERY BANNER
+        ========================= */
+
+        .gallery-banner {
+            background: linear-gradient(
+                rgba(0,136,204,0.92),
+                rgba(0,136,204,0.92)
+            );
+
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .gallery-banner h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .gallery-banner p {
+            font-size: 20px;
+        }
+
+
+        /* =========================
+           GALLERY SECTION
+        ========================= */
+
+        .gallery-section {
+            padding: 65px 8%;
+            background: #f5f9ff;
+            text-align: center;
+        }
+
+        .gallery-section h2 {
+            color: #0088cc;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .gallery-subtitle {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+
+        /* =========================
+           GALLERY GRID
+        ========================= */
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 30px;
+
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           GALLERY CARD
+        ========================= */
+
+        .gallery-card {
+            background: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.12);
+
+            transition: 0.3s;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.18);
+        }
+
+
+        /* =========================
+           PET IMAGES
+        ========================= */
+
+        .gallery-card img {
+            width: 100%;
+            height: 270px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        /* =========================
+           IMAGE DETAILS
+        ========================= */
+
+        .gallery-info {
+            padding: 22px;
+        }
+
+        .gallery-info h3 {
+            color: #0088cc;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .gallery-info p {
+            color: #666;
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .gallery-footer {
+            background: #0088cc;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media(max-width:768px) {
+
+            .gallery-banner h1 {
+                font-size: 36px;
+            }
+
+            .gallery-section h2 {
+                font-size: 32px;
+            }
+
+            .gallery-card img {
+                height: 250px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="logo">
+        🐾 Anu PetCare
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="appointments.html">Appointments</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     BANNER
+========================= -->
+
+<section class="gallery-banner">
+
+    <h1>
+        Our Gallery
+    </h1>
+
+    <p>
+        Happy Pets, Healthy Hearts 🐾
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="gallery-section">
+
+    <h2>
+        PetCare Gallery
+    </h2>
+
+    <p class="gallery-subtitle">
+        A glimpse of our caring environment and happy pets
+    </p>
+
+
+    <div class="gallery-container">
+
+
+        <!-- PET 1 -->
+
+        <div class="gallery-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=80"
+                alt="Happy Golden Retriever">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Happy Pets 🐶
+                </h3>
+
+                <p>
+                    Healthy and happy pets are our priority.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PET 2 -->
+
+        <div class="gallery-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=900&q=80"
+                alt="Cute Cat">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Cat Care 🐱
+                </h3>
+
+                <p>
+                    Gentle care and attention for our lovely cats.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PET 3 -->
+
+        <div class="gallery-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=900&q=80"
+                alt="Happy Dog">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Dog Care 🐕
+                </h3>
+
+                <p>
+                    Friendly and professional care for your dogs.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PET 4 -->
+
+        <div class="gallery-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=80"
+                alt="Dogs Playing">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Playful Pets 🐾
+                </h3>
+
+                <p>
+                    A happy environment where pets can feel comfortable.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PET 5 -->
+
+        <div class="gallery-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=900&q=80"
+                alt="Pet Cat Care">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Loving Care ❤️
+                </h3>
+
+                <p>
+                    We provide gentle and loving care for every pet.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PET 6 -->
+
+        <div class="gallery-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=900&q=80"
+                alt="Dog Veterinary Care">
+
+            <div class="gallery-info">
+
+                <h3>
+                    Veterinary Care 🩺
+                </h3>
+
+                <p>
+                    Professional veterinary support for healthy pets.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="gallery-footer">
+
+    <p>
+        © 2026 Anu PetCare & Veterinary Clinic
+    </p>
+
+    <p>
+        Caring Hearts, Healthy Pets 🐾
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Appointments | Anu PetCare</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           APPOINTMENT PAGE
+        ========================== */
+
+        .appointment-page {
+            background: #f5f9ff;
+            min-height: 100vh;
+        }
+
+
+        /* =========================
+           BANNER
+        ========================== */
+
+        .appointment-banner {
+            background: linear-gradient(
+                rgba(0,136,204,0.95),
+                rgba(0,136,204,0.95)
+            );
+
+            color: white;
+            text-align: center;
+
+            padding: 65px 20px;
+        }
+
+        .appointment-banner h1 {
+            font-size: 48px;
+            margin: 0 0 10px;
+        }
+
+        .appointment-banner p {
+            font-size: 20px;
+            margin: 0;
+        }
+
+
+        /* =========================
+           DOCTORS SECTION
+        ========================== */
+
+        .doctors-section {
+            padding: 60px 6%;
+
+            background: #f5f9ff;
+
+            text-align: center;
+        }
+
+        .doctors-section h2 {
+            color: #0088cc;
+
+            font-size: 40px;
+
+            margin: 0 0 10px;
+        }
+
+        .doctors-subtitle {
+            color: #666;
+
+            font-size: 18px;
+
+            margin-bottom: 40px;
+        }
+
+
+        /* =========================
+           DOCTORS CONTAINER
+        ========================== */
+
+        .doctors-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 28px;
+
+            max-width: 1350px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           DOCTOR CARD
+        ========================== */
+
+        .doctor-card {
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 28px 20px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.12);
+
+            transition: 0.3s;
+        }
+
+        .doctor-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 10px 28px rgba(0,0,0,0.18);
+        }
+
+
+        /* =========================
+           DOCTOR IMAGE
+        ========================== */
+
+        .doctor-image {
+
+            width: 220px;
+
+            height: 220px;
+
+            margin: 0 auto 25px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            border: 7px solid #e8f7ff;
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.15);
+
+            background: white;
+        }
+
+
+        .doctor-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            object-position: center;
+        }
+
+
+        /* =========================
+           DOCTOR NAME
+        ========================== */
+
+        .doctor-info h3 {
+
+            color: #0088cc;
+
+            font-size: 25px;
+
+            margin: 10px 0;
+        }
+
+
+        .speciality {
+
+            color: #222;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            margin: 8px 0 12px;
+        }
+
+
+        .doctor-info p {
+
+            color: #666;
+
+            font-size: 16px;
+
+            line-height: 1.6;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           BOOK BUTTON
+        ========================== */
+
+        .appointment-btn {
+
+            display: inline-block;
+
+            background: #ff9800;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 13px 25px;
+
+            border-radius: 25px;
+
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        .appointment-btn:hover {
+
+            background: #e67e00;
+
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           BOOKING INFO
+        ========================== */
+
+        .booking-info {
+
+            background: #eaf7ff;
+
+            padding: 50px 20px;
+
+            text-align: center;
+        }
+
+        .booking-info h2 {
+
+            color: #0088cc;
+
+            font-size: 30px;
+
+            margin-bottom: 12px;
+        }
+
+        .booking-info p {
+
+            color: #555;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        .appointment-footer {
+
+            background: #0088cc;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        .appointment-footer p {
+
+            margin: 5px;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================== */
+
+        @media (max-width: 1100px) {
+
+            .doctors-container {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 650px) {
+
+            .appointment-banner h1 {
+
+                font-size: 36px;
+            }
+
+            .appointment-banner p {
+
+                font-size: 17px;
+            }
+
+            .doctors-container {
+
+                grid-template-columns: 1fr;
+            }
+
+            .doctor-image {
+
+                width: 230px;
+
+                height: 230px;
+            }
+
+            .doctors-section h2 {
+
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header>
+
+    <div class="logo">
+        🐾 Anu PetCare
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="appointments.html">
+            Appointments
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     APPOINTMENT PAGE
+========================================= -->
+
+<div class="appointment-page">
+
+
+    <!-- BANNER -->
+
+    <section class="appointment-banner">
+
+        <h1>
+            Book an Appointment
+        </h1>
+
+        <p>
+            Meet Our Veterinary Doctors 🐾
+        </p>
+
+    </section>
+
+
+
+    <!-- DOCTORS -->
+
+    <section class="doctors-section">
+
+        <h2>
+            Our Veterinary Doctors
+        </h2>
+
+        <p class="doctors-subtitle">
+            Choose a doctor for your beloved pet
+        </p>
+
+
+
+        <div class="doctors-container">
+
+
+
+            <!-- =================================
+                 DR. ANUSHA
+            ================================== -->
+
+            <div class="doctor-card">
+
+                <div class="doctor-image">
+
+                    <img
+                        src="images/dr1.jpeg"
+                        alt="Dr. Anusha">
+
+                </div>
+
+
+                <div class="doctor-info">
+
+                    <h3>
+                        Dr. Anusha
+                    </h3>
+
+                    <p class="speciality">
+                        Pet Care Specialist
+                    </p>
+
+                    <p>
+                        Expert in pet health,
+                        treatment and preventive care.
+                    </p>
+
+                    <a
+                        href="contact.html"
+                        class="appointment-btn">
+
+                        Book Appointment
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 DR. AKSHAYA
+            ================================== -->
+
+            <div class="doctor-card">
+
+                <div class="doctor-image">
+
+                    <img
+                        src="images/dr4.jpeg"
+                        alt="Dr. Akshaya">
+
+                </div>
+
+
+                <div class="doctor-info">
+
+                    <h3>
+                        Dr. Akshaya
+                    </h3>
+
+                    <p class="speciality">
+                        Veterinary Physician
+                    </p>
+
+                    <p>
+                        Specialized in pet wellness,
+                        vaccination and general care.
+                    </p>
+
+                    <a
+                        href="contact.html"
+                        class="appointment-btn">
+
+                        Book Appointment
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 DR. ANEELA
+            ================================== -->
+
+            <div class="doctor-card">
+
+                <div class="doctor-image">
+
+                    <img
+                        src="images/dr2.jpeg"
+                        alt="Dr. Aneela">
+
+                </div>
+
+
+                <div class="doctor-info">
+
+                    <h3>
+                        Dr. Aneela
+                    </h3>
+
+                    <p class="speciality">
+                        Pet Surgeon
+                    </p>
+
+                    <p>
+                        Experienced in pet treatment,
+                        surgery and emergency care.
+                    </p>
+
+                    <a
+                        href="contact.html"
+                        class="appointment-btn">
+
+                        Book Appointment
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 DR. AYESHA
+            ================================== -->
+
+            <div class="doctor-card">
+
+                <div class="doctor-image">
+
+                    <img
+                        src="images/dr3.jpeg"
+                        alt="Dr. Ayesha">
+
+                </div>
+
+
+                <div class="doctor-info">
+
+                    <h3>
+                        Dr. Ayesha
+                    </h3>
+
+                    <p class="speciality">
+                        Pet Dental Specialist
+                    </p>
+
+                    <p>
+                        Focused on dental care,
+                        nutrition and healthy pets.
+                    </p>
+
+                    <a
+                        href="contact.html"
+                        class="appointment-btn">
+
+                        Book Appointment
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         BOOKING INFORMATION
+    ========================================== -->
+
+    <section class="booking-info">
+
+        <h2>
+            🐾 Your Pet Deserves the Best Care
+        </h2>
+
+        <p>
+            Select your preferred doctor and
+            book an appointment for your pet.
+        </p>
+
+    </section>
+
+
+</div>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="appointment-footer">
+
+    <p>
+        © 2026 Anu PetCare & Veterinary Clinic
+    </p>
+
+    <p>
+        Caring Hearts, Healthy Pets 🐾
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
